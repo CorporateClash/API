@@ -38,7 +38,7 @@ body {
 	line-height: 1.6;
 	font-weight: 400;
 	font-family: system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
-	background: #fbfbfb;
+	background: #2E3336;
 
 	&.nav-open {
 		overflow: hidden;
@@ -183,7 +183,7 @@ dl dd:after {
 	}
 
 	a {
-		color: #777;
+		color: white;
 		text-decoration: none;
 		font-size: .90em;
 		display: block;
