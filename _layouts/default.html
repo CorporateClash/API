@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+<!-- Toontown: Corporate Clash Software -->
+<!-- Copyright (c) Toontown: Corporate Clash. All rights reserved. -->
+<!-- The code and site design of this website are the sole property -->
+<!-- of Toontown: Corporate Clash. Under no circumstances shall -->
+<!-- anyone take and use any form of this website's code. -->
+
+<html lang="en-us">
+<head>
+
+	    <meta charset="UTF-8">
+	    <title>Corporate Clash | API</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	    <meta content="all" name="robots">
+
+	    <meta name="description" content="Toontown: Corporate Clash API documentation!">
+	    <meta name="keywords" content="toon,town,corporate,clash,online,ttcc,toontown">
+	    <meta name="image" content="/img/icon.png">
+
+	    <meta itemprop="name" content="@yield('title')">
+	    <meta itemprop="description" content="Toontown: Corporate Clash API documentation!">
+	    <meta itemprop="image" content="/img/icon.png">
+
+	    <meta name="og:title" content="@yield('title')">
+	    <meta name="og:description" content="Toontown: Corporate Clash API documentation!">
+	    <meta name="og:image" content="/img/icon.png">
+	    <meta name="og:url" content="https://corporateclash.net">
+	    <meta name="og:site_name" content="Toontown: Corporate Clash">
+	    <meta name="og:locale" content="en_GB">
+	    <meta name="og:type" content="website">
 
 		<link rel="stylesheet" href="/css/style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="/js/main.js"></script>
 		{% seo %}
 
@@ -24,7 +51,7 @@
 		<header>
 			<h1>
 				<a href="/">
-					<img src="https://corporateclash.net/rebrand/resources/images/_icon.png" alt="{{ site.title }} logo">
+					<img src="/images/logo.png" alt="{{ site.title }} logo">
 				</a>
 				<button type="button" class="open-nav" id="open-nav"></button>
 			</h1>
@@ -37,7 +64,7 @@
 			{% include sidebar.html %}
 
 			<p class="copyright">
-				<a href="https://corporateclash.net/">
+				<a href="https://github.com/CorporateClash/API">
 					Made with ❤ by Corporate Clash developers
 				</a>
 			</p>
