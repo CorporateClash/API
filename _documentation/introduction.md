@@ -3,20 +3,16 @@ title: Introduction
 position: 1
 ---
 
-Welcome to our API.
+Welcome to the official Toontown: Corporate Clash API!
 
-This API document is designed for those interested in developing for our platform.
+All versioned APIs fall under the official Corporate Clash route:
 
-This API is still under development and will evolve.
-
-You'll succeed if you do this.
-{: .success }
-
-Here's some useful information.
+https://corporateclash.net/api/
 {: .info }
 
-Something may not happen if you try and do this.
-{: .warning }
+Our web-server uses TLS for all communications, meaning you will need some Python 3.x version to perform requests to our secure API channels.
 
-Something bad will happen if you do this.
-{: .error }
+
+You may use this API document at your own expense, we have no liability over the third-party applications that are built with our software. You can find more on this, stated specifically in our <a href="https://corporateclash.net/help/terms">Terms of Service</a>.
+
+For bug reporting, feedback, and support please <a href="mailto:support@corporateclash.net">contact our support team</a>.
