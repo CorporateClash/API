@@ -1,6 +1,6 @@
 ---
 title: /api/v1/login/
-position: 1.1
+position: 0
 type: post
 description: Responds with a JSON object detailing the status of the login request, along with a temporary gameserver token.
 right_code: |
