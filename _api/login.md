@@ -1,5 +1,5 @@
 ---
-title: /v1/login/:username
+title: /v1/login/
 position: 0
 type: post
 description: Responds with a JSON object detailing the status of the login request, along with a temporary gameserver token.
@@ -8,16 +8,23 @@ right_code: |
   # https://pypi.python.org/pypi/requests
   import requests
 
-  jsonData = {'password' : 'your_password'}
-  url = ('https://corporateclash.net/api/v1/login/' + 'your username')
+  credentials = {
+      'username' : 'your_username',
+      'password' : 'your_password',
+  }
 
-  r = requests.post(url, json=jsonData)
+  url = ('https://corporateclash.net/api/v1/login/')
+
+  r = requests.post(url, json=credentials)
   print(r.json())
   ~~~
   {: title="Python" }
 ---
+username
+: The account username.
+
 password
-: The users password.
+: The account password.
 
 Response Object
 
@@ -49,5 +56,3 @@ Callback
 | false  | 3     | The user has been HWID checked and banned.           |
 | false  | 4 | User did not meet the login requisites. (access level, etc) |
 | false  | 5   | The users playertoken was either not found or corrupted.     |
-
-The login API only works over Secure HTTPS connections with TLS v1.1 or 1.2, and clients must support elliptic curve cryptography (ECC) and SNI. Key pinning is not supported at this time.
