@@ -32,6 +32,8 @@ Response Object
 ~~~
 {: title="JSON" }
 
+Response Fields
+
 | Field | Type        | Description                      |
 |------|-------------|----------------------------------|
 | status  | boolean   | Whether there were any issues when logging in. |
