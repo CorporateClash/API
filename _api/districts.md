@@ -26,8 +26,8 @@ Response Array
     	"invasion_online": "true",
     	"last_update": "",
     	"cogs_attacking": "",
-    	"count_defeated": "",
-    	"count_total": "",
+    	"count_defeated": 0,
+    	"count_total": 0,
     	"remaining_time": 0
     },
 
@@ -37,8 +37,8 @@ Response Array
     	"invasion_online": "true",
     	"last_update": "",
     	"cogs_attacking": "",
-    	"count_defeated": "",
-    	"count_total": "",
+    	"count_defeated": 0,
+    	"count_total": 0,
     	"remaining_time": 0
     }
 ]
@@ -54,6 +54,6 @@ Response Fields
 | invasion_online   | string | Whether or not there is an active invasion on the district.  |
 | last_update  | string | The last point at which the districts' data was updated. |
 | cogs_attacking  | string   | The type of cog that is invading the district. Left empty if no active invasion. |
-| count_defeated  | string   | Total amount of cogs defeated. Left empty if no active invasion. |
-| count_total   | string | Total amount of cogs invading. Left empty if no active invasion. |
-| remaining_time  | string | The last point at which the districts' data was updated. |
+| count_defeated  | integer   | Total amount of cogs defeated. Left empty if no active invasion. |
+| count_total   | integer | Total amount of cogs invading. Left empty if no active invasion. |
+| remaining_time  | integer | The last point at which the districts' data was updated. |
