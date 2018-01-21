@@ -12,7 +12,7 @@ These endpoints provide various types of data / information, ranging from toon-s
 ## APIs
 
 * Login (v1)
-* Invasions (v1)
+* Districts (v1)
 * More soon!
 
 ## Credits
