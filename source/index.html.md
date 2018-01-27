@@ -95,6 +95,9 @@ User did not meet the login requisites. (access level, etc)
 ### Reason 5: Invalid playertoken
 The users playertoken was either not found or corrupted.
 
+### Reason 429: Rate Limit
+You're request has been rate limited.
+
 # Gameserver
 
 ## District API (v1)
