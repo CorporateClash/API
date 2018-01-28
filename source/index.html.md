@@ -69,7 +69,7 @@ print(r.json())
 ```json
 {
   "status": true,
-  "reason": 0,
+  "reason": 1000,
   "friendlyreason": "",
   "token": ""
 }
@@ -82,19 +82,19 @@ print(r.json())
 | friendlyreason   | string | Human-readable message detailing why the login was rejected/accepted.  |
 | token  | string | Temporary game token that is valid for 2 minutes (60 seconds) after being served. |
 
-### Reason 0: Successful login
+### Reason 1000: Successful login
 The submitted credentials were verified as correct.
 
-### Reason 2: Confusion
+### Reason 1002: Confusion
 There are several accounts with the similar identifiers.
 
-### Reason 3: User ban
+### Reason 1003: User ban
 The user has been HWID checked and banned.
 
-### Reason 4: Unmet requisites
+### Reason 1004: Unmet requisites
 User did not meet the login requisites. (access level, etc)
 
-### Reason 5: Invalid playertoken
+### Reason 1005: Invalid playertoken
 The users playertoken was either not found or corrupted.
 
 # Gameserver
