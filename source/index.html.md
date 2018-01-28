@@ -15,6 +15,8 @@ search: true
 
 # Introduction
 
+> Important Note
+
 ```python
 # Our web-server and all accompanying APIs only work over
 # Secure HTTPS connections with TLS v1.1 or 1.2, and clients
@@ -95,9 +97,6 @@ User did not meet the login requisites. (access level, etc)
 ### Reason 5: Invalid playertoken
 The users playertoken was either not found or corrupted.
 
-### Reason 429: Rate Limit
-You're request has been rate limited.
-
 # Gameserver
 
 ## District API (v1)
@@ -159,3 +158,35 @@ print(r.json())
 | count_defeated  | integer   | Total amount of cogs defeated. Left empty if no active invasion. |
 | count_total   | integer | Total amount of cogs invading. Left empty if no active invasion. |
 | remaining_time  | integer | The last point at which the districts' data was updated. |
+
+
+# Restrictions
+
+## Rate Limiting
+
+* You may send 10 requests to any public API every 60 seconds.
+* If the origin of the requests are rate limited too often, it will be temporarily blocked.
+
+
+### API Response
+
+> JSON Response
+
+```json
+{
+  "status": false,
+  "reason": 429,
+  "friendlyreason": "",
+  "token": ""
+}
+```
+
+| Field | Type        | Description                      |
+|------|-------------|----------------------------------|
+| status  | boolean: false   | Your API request failed. |
+| reason  | integer   | Code regarding the status of your request. |
+| friendlyreason   | string | Human-readable message detailing why the login was rate limited.  |
+| token  | string | Emypt, API request reject. |
+
+### Reason 429: Rate Limit
+You're trying to send that request too fast!
