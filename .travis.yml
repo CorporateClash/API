@@ -2,6 +2,7 @@ language: ruby
 
 script:
   - bundle exec middleman build --clean
+  - echo "docs.clash.lol" > build/CNAME
 
 deploy:
   provider: pages
