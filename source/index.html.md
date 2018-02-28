@@ -186,7 +186,7 @@ print(r.json())
 | status  | boolean: false   | Your API request failed. |
 | reason  | integer   | Code regarding the status of your request. |
 | friendlyreason   | string | Human-readable message detailing why the login was rate limited.  |
-| token  | string | Emypt, API request reject. |
+| token  | string | Empty, API request reject. |
 
 ### Reason 429: Rate Limit
 You're trying to send that request too fast!
