@@ -178,7 +178,6 @@ print(r.json())
 | hash  | string <md5>   | The MD5 hash of the asset. |
 | file  | string   | The raw name of the asset. |
 
-
 ## Blog API (v1)
 
 > Generic Request
@@ -215,6 +214,38 @@ print(r.json())
 | id  | integer   | The article identifier. |
 | title  | string   | The article title. |
 | summary   | string | A summary of the article's description.  |
+
+
+## Version API (v1)
+
+> Generic Request
+
+```python
+# https://pypi.python.org/pypi/requests
+import requests
+
+url = ('https://corporateclash.net/api/v1/launcher/version/')
+
+r = requests.get(url)
+print(r.json())
+```
+
+* `https://corporateclash.net/api/v1/launcher/version/`
+* Responds with a single JSON object representing the official launcher version.
+
+### API Response
+
+> JSON Response
+
+```json
+{
+  "version": "1.x.x"
+}
+```
+
+| Field | Type        | Description                      |
+|------|-------------|----------------------------------|
+| version  | string   | Number representing the current version of the official launcher. |
 
 # Gameserver
 
