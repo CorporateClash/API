@@ -31,7 +31,7 @@ You may use this API document at your own expense, we have no liability over the
 
 For bug reporting, feedback, and support please <a href="mailto:support@corporateclash.net">contact our support team</a>.
 
-# Authentication
+# Launcher
 
 ## Login API (v1)
 
@@ -85,7 +85,7 @@ print(r.json())
 ### Reason 1000: Successful login
 The submitted credentials were verified as correct.
 
-### Reason 1002: Confusion
+### Reason 1002: Database Conflict
 There are several accounts with the similar identifiers.
 
 ### Reason 1003: User ban
@@ -96,6 +96,87 @@ User did not meet the login requisites. (access level, etc)
 
 ### Reason 1005: Invalid playertoken
 The users playertoken was either not found or corrupted.
+
+## Manifest API (v1)
+
+> General Login
+
+```python
+# https://pypi.python.org/pypi/requests
+import requests
+
+url = ('https://corporateclash.net/api/v1/launcher/manifest/')
+
+r = requests.get(url)
+print(r.json())
+```
+
+* `https://corporateclash.net/api/v1/launcher/manifest/`
+* Responds with a nested JSON object detailing all files required to power the game on an operational level, along with the base URL of where those resources are hosted.
+
+
+### API Response
+
+> JSON Response
+
+```json
+{
+  "files": {
+    "win32": [
+      {
+        "path": "win32/cg.dll",
+        "hash": "ae87223e882670029450b3f86e8e9300",
+        "file": "cg.dll"
+      }
+    ],
+    "game": [
+      {
+        "path": "game/ttcc.bin",
+        "hash": "f6959e45e56a8c5368111b29d257219a",
+        "file": "ttcc.bin"
+      }
+    ],
+    "darwin": [
+      {
+        "path": "darwin/Cg",
+        "hash": "007be4a7fcb7c8eacb80f0572b2658d1",
+        "file": "Cg"
+      }
+    ],
+    "resources": [
+      {
+        "path": "resources/phase_10.mf",
+        "hash": "771cddc5f5a8f3cc8f4fa7b3a91e511f",
+        "file": "phase_10.mf"
+      }
+    ]
+  },
+
+  "base": "https://cdn.clash.lol/"
+}
+```
+
+### Main JSON Object
+
+| Field | Type        | Description                      |
+|------|-------------|----------------------------------|
+| base  | string   | The base URL which is prepended to each asset's path field. |
+
+| JSON | Type        | Description                      |
+|------|-------------|----------------------------------|
+| files  | array   | Holds the 4 nested JSON arrays that represent the four major categories of assets. |
+| win32  | array   | Holds all the required dependencies for the windows platform. |
+| game  | array   | Holds all the game binaries required for all supported platforms. |
+| darwin  | array   | Holds all the required dependencies for the macintosh platform. |
+| resources  | array   | Holds all the game resources required for all supported platforms. |
+
+### Nested JSON Objects / Items
+
+| Field | Type        | Description                      |
+|------|-------------|----------------------------------|
+| path  | string   | The path of the asset which is appended to the base URL. |
+| hash  | string <md5>   | The MD5 hash of the asset. |
+| file  | string   | The raw name of the asset. |
 
 # Gameserver
 
