@@ -35,7 +35,7 @@ For bug reporting, feedback, and support please <a href="mailto:support@corporat
 
 ## Login API (v1)
 
-> General Login
+> Generic Request
 
 ```python
 # https://pypi.python.org/pypi/requests
@@ -99,7 +99,7 @@ The users playertoken was either not found or corrupted.
 
 ## Manifest API (v1)
 
-> General Login
+> Generic Request
 
 ```python
 # https://pypi.python.org/pypi/requests
@@ -177,6 +177,44 @@ print(r.json())
 | path  | string   | The path of the asset which is appended to the base URL. |
 | hash  | string <md5>   | The MD5 hash of the asset. |
 | file  | string   | The raw name of the asset. |
+
+
+## Blog API (v1)
+
+> Generic Request
+
+```python
+# https://pypi.python.org/pypi/requests
+import requests
+
+url = ('https://corporateclash.net/api/v1/launcher/news/')
+
+r = requests.get(url)
+print(r.json())
+```
+
+* `https://corporateclash.net/api/v1/launcher/news/`
+* Responds with an array of JSON objects representing news items.
+
+### API Response
+
+> JSON Response
+
+```json
+[
+  {
+    "id": 1,
+    "title": "Sample news article 1",
+    "summary": "See what this blog post has in store!"
+  }
+]
+```
+
+| Field | Type        | Description                      |
+|------|-------------|----------------------------------|
+| id  | integer   | The article identifier. |
+| title  | string   | The article title. |
+| summary   | string | A summary of the article's description.  |
 
 # Gameserver
 
