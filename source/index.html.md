@@ -21,8 +21,14 @@ search: true
 # Our web-server and all accompanying APIs only work over
 # Secure HTTPS connections with TLS v1.1 or 1.2, and clients
 # must support elliptic curve cryptography (ECC) and SNI.
-# Key pinning is not supported at this time. You will need a
-# Python 3.x build to successfully run our code samples.
+# Key pinning is not supported at this time, howerver you
+# may confirm that the certificate is issued by the following 
+# Certificate Authorities (or check against our CAA records):
+# comodoca.com
+# digicert.com
+# globalsign.com
+# letsencrypt.org
+# Our code samples are specifically made for Python 3.
 ```
 
 Welcome to the official Toontown: Corporate Clash API!
