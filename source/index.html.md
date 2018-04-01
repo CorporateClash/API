@@ -22,7 +22,7 @@ search: true
 # Secure HTTPS connections with TLS v1.1 or 1.2, and clients
 # must support elliptic curve cryptography (ECC) and SNI.
 # Key pinning is not supported at this time, howerver you
-# may confirm that the certificate is issued by the following 
+# may confirm that the certificate is issued by the following
 # Certificate Authorities (or check against our CAA records):
 # comodoca.com
 # digicert.com
@@ -198,7 +198,20 @@ r = requests.get(url)
 print(r.json())
 ```
 
-* `https://corporateclash.net/api/v1/launcher/news/`
+> Specific Request
+
+```python
+# https://pypi.python.org/pypi/requests
+import requests
+
+# :id = 1 to specifically get the first article
+url = ('https://corporateclash.net/api/v1/launcher/news/1')
+
+r = requests.get(url)
+print(r.json())
+```
+
+* `https://corporateclash.net/api/v1/launcher/news/:id`
 * Responds with an array of JSON objects representing news items.
 
 ### API Response
@@ -209,8 +222,11 @@ print(r.json())
 [
   {
     "id": 1,
-    "title": "Sample news article 1",
-    "summary": "See what this blog post has in store!"
+    "author": "The Team",
+    "posted": "2018-03-29 21:38:50",
+    "title": "First Article!",
+    "summary": "See what this blog post has in store!",
+    "category": "alpha-updates"
   }
 ]
 ```
@@ -218,8 +234,11 @@ print(r.json())
 | Field | Type        | Description                      |
 |------|-------------|----------------------------------|
 | id  | integer   | The article identifier. |
-| title  | string   | The article title. |
-| summary   | string | A summary of the article's description.  |
+| author  | string   | Who posted this article. |
+| posted  | timestamp  | When this article was posted. |
+| title  | string   | The title of the article. |
+| summary   | string | A brief description of the article.  |
+| category   | string | What this article is categorized as.  |
 
 
 ## Version API (v1)
