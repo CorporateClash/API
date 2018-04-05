@@ -97,11 +97,11 @@ The account has been terminated as result of 10 or more moderation points.
 ### Reason 1003: Account Ban
 The account has an an active ban delimited by the hours left.
 
-### Reason 1004: Unmet requisites
-User did not meet the login requisites. (access level, etc)
+### Reason 1004: Server Maintenance
+The account is locked out of the server due to pending maintenance.
 
-### Reason 1005: Invalid playertoken
-The users playertoken was either not found or corrupted.
+### Reason 1005: Invalid Token
+The account token submitted doesn't exist.
 
 ## Manifest API (v1)
 
