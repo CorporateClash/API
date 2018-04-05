@@ -88,14 +88,14 @@ print(r.json())
 | friendlyreason   | string | Human-readable message detailing why the login was rejected/accepted.  |
 | token  | string | Temporary game token that is valid for 2 minutes (60 seconds) after being served. |
 
-### Reason 1000: Successful login
+### Reason 1000: Successful Login
 The submitted credentials were verified as correct.
 
-### Reason 1002: Database Conflict
-There are several accounts with the similar identifiers.
+### Reason 1002: Account Termination
+The account has been terminated as result of 10 or more moderation points.
 
-### Reason 1003: User ban
-The user has been HWID checked and banned.
+### Reason 1003: Account Ban
+The account has an an active ban delimited by the hours left.
 
 ### Reason 1004: Unmet requisites
 User did not meet the login requisites. (access level, etc)
