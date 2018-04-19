@@ -112,8 +112,9 @@ The account token submitted doesn't exist.
 import requests
 
 url = ('https://corporateclash.net/api/v1/launcher/manifest/')
+headers = {'user-agent': 'TTCC-Launcher'}
 
-r = requests.get(url)
+r = requests.post(url, headers=headers)
 print(r.json())
 ```
 
