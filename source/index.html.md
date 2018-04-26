@@ -52,7 +52,7 @@ credentials = {
     'password' : 'your_password',
 }
 
-url = ('https://corporateclash.net/api/v1/login/')
+url = 'https://corporateclash.net/api/v1/login/'
 
 r = requests.post(url, json=credentials)
 print(r.json())
@@ -111,7 +111,7 @@ The account token submitted doesn't exist.
 # https://pypi.python.org/pypi/requests
 import requests
 
-url = ('https://corporateclash.net/api/v1/launcher/manifest/')
+url = 'https://corporateclash.net/api/v1/launcher/manifest/'
 headers = {'user-agent': 'TTCC-Launcher'}
 
 r = requests.post(url, headers=headers)
@@ -193,7 +193,7 @@ print(r.json())
 # https://pypi.python.org/pypi/requests
 import requests
 
-url = ('https://corporateclash.net/api/v1/launcher/news/')
+url = 'https://corporateclash.net/api/v1/launcher/news/'
 
 r = requests.get(url)
 print(r.json())
@@ -206,7 +206,7 @@ print(r.json())
 import requests
 
 # :id = 1 to specifically get the first article
-url = ('https://corporateclash.net/api/v1/launcher/news/1')
+url = 'https://corporateclash.net/api/v1/launcher/news/1'
 
 r = requests.get(url)
 print(r.json())
@@ -250,7 +250,7 @@ print(r.json())
 # https://pypi.python.org/pypi/requests
 import requests
 
-url = ('https://corporateclash.net/api/v1/launcher/version/')
+url = 'https://corporateclash.net/api/v1/launcher/version/'
 
 r = requests.get(url)
 print(r.json())
@@ -283,7 +283,7 @@ print(r.json())
 # https://pypi.python.org/pypi/requests
 import requests
 
-url = ('https://corporateclash.net/api/v1/districts/')
+url = 'https://corporateclash.net/api/v1/districts/'
 
 r = requests.get(url)
 print(r.json())
