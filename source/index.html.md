@@ -58,6 +58,7 @@ r = requests.post(url, json=credentials)
 print(r.json())
 ```
 
+* Rate limit: The login API is rate-limited at the cloudflare level, which has a separate rate limit from the one noted at the bottom of this page. The rate limiter noted will only tick if you pass the cloudflare rate limit.
 * `https://corporateclash.net/api/v1/login/`
 * Responds with a JSON object detailing the status of the login request, along with temporary gameserver information utilized by the TTCC client.
 
@@ -76,8 +77,8 @@ print(r.json())
 {
   "status": true,
   "reason": 1000,
-  "friendlyreason": "",
-  "token": ""
+  "friendlyreason": "Welcome back, username!",
+  "token": "abc123"
 }
 ```
 
@@ -340,9 +341,9 @@ print(r.json())
 
 ## Rate Limiting
 
-* You may send 10 requests to any public API every 60 seconds.
+* You may send 20 requests to any public API every 60 seconds.
 * If the origin of the requests are rate limited too often, it will be temporarily blocked.
-
+* Abuse of our API is monitored automatically and may get certain IPs permanently blocked. You may appeal by emailing judge@corporateclash.net
 
 ### API Response
 
