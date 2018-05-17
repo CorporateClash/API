@@ -1,0 +1,792 @@
+
+<!doctype html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>API Documentation</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta content="all" name="robots">
+
+      <meta name="description" content="Toontown: Corporate Clash API documentation!">
+      <meta name="keywords" content="toon,town,corporate,clash,online,ttcc,toontown">
+      <meta name="image" content="images/icon.png">
+
+      <meta itemprop="name" content="API Documentation">
+      <meta itemprop="description" content="Toontown: Corporate Clash API documentation!">
+      <meta itemprop="image" content="images/icon.png">
+
+      <meta name="og:title" content="API Documentation">
+      <meta name="og:description" content="Toontown: Corporate Clash API documentation!">
+      <meta name="og:image" content="images/icon.png">
+      <meta name="og:url" content="https://corporateclash.net">
+      <meta name="og:site_name" content="Toontown: Corporate Clash">
+      <meta name="og:locale" content="en_GB">
+      <meta name="og:type" content="website">
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;python&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo.png" class="logo" alt="Logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="python">python</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#launcher" class="toc-h1 toc-link" data-title="Launcher">Launcher</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#login-api-v1" class="toc-h2 toc-link" data-title="Login API (v1)">Login API (v1)</a>
+                  </li>
+                  <li>
+                    <a href="#manifest-api-v1" class="toc-h2 toc-link" data-title="Manifest API (v1)">Manifest API (v1)</a>
+                  </li>
+                  <li>
+                    <a href="#blog-api-v1" class="toc-h2 toc-link" data-title="Blog API (v1)">Blog API (v1)</a>
+                  </li>
+                  <li>
+                    <a href="#version-api-v1" class="toc-h2 toc-link" data-title="Version API (v1)">Version API (v1)</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#gameserver" class="toc-h1 toc-link" data-title="Gameserver">Gameserver</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#district-api-v1" class="toc-h2 toc-link" data-title="District API (v1)">District API (v1)</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#restrictions" class="toc-h1 toc-link" data-title="Restrictions">Restrictions</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#rate-limiting" class="toc-h2 toc-link" data-title="Rate Limiting">Rate Limiting</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#conclusion" class="toc-h1 toc-link" data-title="Conclusion">Conclusion</a>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='https://github.com/CorporateClash/API'>Made with &hearts; by TTCC developers.</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<blockquote>
+<p>Important Note</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="c"># Our web-server and all accompanying APIs only work over</span>
+<span class="c"># Secure HTTPS connections with TLS v1.1 or 1.2, and clients</span>
+<span class="c"># must support elliptic curve cryptography (ECC) and SNI.</span>
+<span class="c"># Key pinning is not supported at this time, howerver you</span>
+<span class="c"># may confirm that the certificate is issued by the following</span>
+<span class="c"># Certificate Authorities (or check against our CAA records):</span>
+<span class="c"># comodoca.com</span>
+<span class="c"># digicert.com</span>
+<span class="c"># globalsign.com</span>
+<span class="c"># letsencrypt.org</span>
+<span class="c"># Our code samples are specifically made for Python 3.</span>
+</code></pre>
+<p>Welcome to the official Toontown: Corporate Clash API!</p>
+
+<p>You may use this API document at your own expense, we have no liability over the third-party applications that are built with our software. You can find more on this, stated specifically in our <a href="https://corporateclash.net/help/terms">Terms of Service</a>.</p>
+
+<p>For bug reporting, feedback, and support please <a href="mailto:support@corporateclash.net">contact our support team</a>.</p>
+<h1 id='launcher'>Launcher</h1><h2 id='login-api-v1'>Login API (v1)</h2>
+<blockquote>
+<p>Generic Request</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="c"># https://pypi.python.org/pypi/requests</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">credentials</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">'username'</span> <span class="p">:</span> <span class="s">'your_username'</span><span class="p">,</span>
+    <span class="s">'password'</span> <span class="p">:</span> <span class="s">'your_password'</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://corporateclash.net/api/v1/login/'</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">json</span><span class="o">=</span><span class="n">credentials</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre>
+<ul>
+<li>Rate limit: The login API is rate-limited at the cloudflare level, which has a separate rate limit from the one noted at the bottom of this page. The rate limiter noted will only tick if you pass the cloudflare rate limit.</li>
+<li><code>https://corporateclash.net/api/v1/login/</code></li>
+<li>Responds with a JSON object detailing the status of the login request, along with temporary gameserver information utilized by the TTCC client.</li>
+</ul>
+
+<table><thead>
+<tr>
+<th>Params</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>username</td>
+<td>The account username.</td>
+</tr>
+<tr>
+<td>password</td>
+<td>The account password.</td>
+</tr>
+</tbody></table>
+<h3 id='api-response'>API Response</h3>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"reason"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"friendlyreason"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Welcome back, username!"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>boolean</td>
+<td>Whether there were any issues when logging in.</td>
+</tr>
+<tr>
+<td>reason</td>
+<td>integer</td>
+<td>Unique identifier for why the login was rejected/accepted.</td>
+</tr>
+<tr>
+<td>friendlyreason</td>
+<td>string</td>
+<td>Human-readable message detailing why the login was rejected/accepted.</td>
+</tr>
+<tr>
+<td>token</td>
+<td>string</td>
+<td>Temporary game token that is valid for 2 minutes (60 seconds) after being served.</td>
+</tr>
+</tbody></table>
+<h3 id='reason-1000-successful-login'>Reason 1000: Successful Login</h3>
+<p>The submitted credentials were verified as correct.</p>
+<h3 id='reason-1002-account-termination'>Reason 1002: Account Termination</h3>
+<p>The account has been terminated as result of 10 or more moderation points.</p>
+<h3 id='reason-1003-account-ban'>Reason 1003: Account Ban</h3>
+<p>The account has an an active ban delimited by the hours left.</p>
+<h3 id='reason-1004-server-maintenance'>Reason 1004: Server Maintenance</h3>
+<p>The account is locked out of the server due to pending maintenance.</p>
+<h3 id='reason-1005-invalid-token'>Reason 1005: Invalid Token</h3>
+<p>The account token submitted doesn&#39;t exist.</p>
+<h2 id='manifest-api-v1'>Manifest API (v1)</h2>
+<blockquote>
+<p>Generic Request</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="c"># https://pypi.python.org/pypi/requests</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://corporateclash.net/api/v1/launcher/manifest/'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s">'user-agent'</span><span class="p">:</span> <span class="s">'TTCC-Launcher'</span><span class="p">}</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre>
+<ul>
+<li><code>https://corporateclash.net/api/v1/launcher/manifest/</code></li>
+<li>Responds with a nested JSON object detailing all files required to power the game on an operational level, along with the base URL of where those resources are hosted.</li>
+</ul>
+<h3 id='api-response-2'>API Response</h3>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"files"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"win32"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"win32/cg.dll"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ae87223e882670029450b3f86e8e9300"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cg.dll"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"game"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"game/ttcc.bin"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"f6959e45e56a8c5368111b29d257219a"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ttcc.bin"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"darwin"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darwin/Cg"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"007be4a7fcb7c8eacb80f0572b2658d1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cg"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="s2">"resources"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"resources/phase_10.mf"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"hash"</span><span class="p">:</span><span class="w"> </span><span class="s2">"771cddc5f5a8f3cc8f4fa7b3a91e511f"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"file"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phase_10.mf"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+
+  </span><span class="s2">"base"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://cdn.clash.lol/"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h3 id='main-json-object'>Main JSON Object</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>base</td>
+<td>string</td>
+<td>The base URL which is prepended to each asset&#39;s path field.</td>
+</tr>
+</tbody></table>
+
+<table><thead>
+<tr>
+<th>JSON</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>files</td>
+<td>array</td>
+<td>Holds the 4 nested JSON arrays that represent the four major categories of assets.</td>
+</tr>
+<tr>
+<td>win32</td>
+<td>array</td>
+<td>Holds all the required dependencies for the windows platform.</td>
+</tr>
+<tr>
+<td>game</td>
+<td>array</td>
+<td>Holds all the game binaries required for all supported platforms.</td>
+</tr>
+<tr>
+<td>darwin</td>
+<td>array</td>
+<td>Holds all the required dependencies for the macintosh platform.</td>
+</tr>
+<tr>
+<td>resources</td>
+<td>array</td>
+<td>Holds all the game resources required for all supported platforms.</td>
+</tr>
+</tbody></table>
+<h3 id='nested-json-objects-items'>Nested JSON Objects / Items</h3>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>path</td>
+<td>string</td>
+<td>The path of the asset which is appended to the base URL.</td>
+</tr>
+<tr>
+<td>hash</td>
+<td>string <md5></td>
+<td>The MD5 hash of the asset.</td>
+</tr>
+<tr>
+<td>file</td>
+<td>string</td>
+<td>The raw name of the asset.</td>
+</tr>
+</tbody></table>
+<h2 id='blog-api-v1'>Blog API (v1)</h2>
+<blockquote>
+<p>Generic Request</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="c"># https://pypi.python.org/pypi/requests</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://corporateclash.net/api/v1/launcher/news/'</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre>
+<blockquote>
+<p>Specific Request</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="c"># https://pypi.python.org/pypi/requests</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="c"># :id = 1 to specifically get the first article</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://corporateclash.net/api/v1/launcher/news/1'</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre>
+<ul>
+<li><code>https://corporateclash.net/api/v1/launcher/news/:id</code></li>
+<li>Responds with an array of JSON objects representing news items.</li>
+</ul>
+<h3 id='api-response-3'>API Response</h3>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Team"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"posted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2018-03-29 21:38:50"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"First Article!"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"summary"</span><span class="p">:</span><span class="w"> </span><span class="s2">"See what this blog post has in store!"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"alpha-updates"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>integer</td>
+<td>The article identifier.</td>
+</tr>
+<tr>
+<td>author</td>
+<td>string</td>
+<td>Who posted this article.</td>
+</tr>
+<tr>
+<td>posted</td>
+<td>timestamp</td>
+<td>When this article was posted.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>string</td>
+<td>The title of the article.</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>string</td>
+<td>A brief description of the article.</td>
+</tr>
+<tr>
+<td>category</td>
+<td>string</td>
+<td>What this article is categorized as.</td>
+</tr>
+</tbody></table>
+<h2 id='version-api-v1'>Version API (v1)</h2>
+<blockquote>
+<p>Generic Request</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="c"># https://pypi.python.org/pypi/requests</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://corporateclash.net/api/v1/launcher/version/'</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre>
+<ul>
+<li><code>https://corporateclash.net/api/v1/launcher/version/</code></li>
+<li>Responds with a single JSON object representing the official launcher version.</li>
+</ul>
+<h3 id='api-response-4'>API Response</h3>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.x.x"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>version</td>
+<td>string</td>
+<td>Number representing the current version of the official launcher.</td>
+</tr>
+</tbody></table>
+<h1 id='gameserver'>Gameserver</h1><h2 id='district-api-v1'>District API (v1)</h2>
+<blockquote>
+<p>Fetch Districts</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="c"># https://pypi.python.org/pypi/requests</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://corporateclash.net/api/v1/districts/'</span>
+
+<span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</code></pre>
+<ul>
+<li><code>https://corporateclash.net/api/v1/districts/</code></li>
+<li>Provides various details regarding the status of all running districts.</li>
+<li>Responds in JSON format.</li>
+</ul>
+<h3 id='api-response-5'>API Response</h3>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"population"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"invasion_online"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_update"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cogs_attacking"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"count_defeated"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"count_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"remaining_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"population"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"invasion_online"</span><span class="p">:</span><span class="w"> </span><span class="s2">"true"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"last_update"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"cogs_attacking"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"count_defeated"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"count_total"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"remaining_time"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of the district.</td>
+</tr>
+<tr>
+<td>population</td>
+<td>integer</td>
+<td>Total population of the district.</td>
+</tr>
+<tr>
+<td>invasion_online</td>
+<td>string</td>
+<td>Whether or not there is an active invasion on the district.</td>
+</tr>
+<tr>
+<td>last_update</td>
+<td>string</td>
+<td>The last point at which the districts&#39; data was updated.</td>
+</tr>
+<tr>
+<td>cogs_attacking</td>
+<td>string</td>
+<td>The type of cog that is invading the district. Left empty if no active invasion.</td>
+</tr>
+<tr>
+<td>count_defeated</td>
+<td>integer</td>
+<td>Total amount of cogs defeated. Left empty if no active invasion.</td>
+</tr>
+<tr>
+<td>count_total</td>
+<td>integer</td>
+<td>Total amount of cogs invading. Left empty if no active invasion.</td>
+</tr>
+<tr>
+<td>remaining_time</td>
+<td>integer</td>
+<td>The last point at which the districts&#39; data was updated.</td>
+</tr>
+</tbody></table>
+<h1 id='restrictions'>Restrictions</h1><h2 id='rate-limiting'>Rate Limiting</h2>
+<ul>
+<li>You may send 20 requests to any public API every 60 seconds.</li>
+<li>If the origin of the requests are rate limited too often, it will be temporarily blocked.</li>
+<li>Abuse of our API is monitored automatically and may get certain IPs permanently blocked. You may appeal by emailing judge@corporateclash.net</li>
+</ul>
+<h3 id='api-response-6'>API Response</h3>
+<blockquote>
+<p>JSON Response</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"reason"</span><span class="p">:</span><span class="w"> </span><span class="mi">429</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"friendlyreason"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"token"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<table><thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>boolean: false</td>
+<td>Your API request failed.</td>
+</tr>
+<tr>
+<td>reason</td>
+<td>integer</td>
+<td>Code regarding the status of your request.</td>
+</tr>
+<tr>
+<td>friendlyreason</td>
+<td>string</td>
+<td>Human-readable message detailing why the login was rate limited.</td>
+</tr>
+<tr>
+<td>token</td>
+<td>string</td>
+<td>Empty, API request reject.</td>
+</tr>
+</tbody></table>
+<h3 id='reason-429-rate-limit'>Reason 429: Rate Limit</h3>
+<p>You&#39;re trying to send that request too fast!</p>
+<h1 id='conclusion'>Conclusion</h1>
+<p>Do you have feedback?  Send our <a href="mailto:support@corporateclash.net">support team</a> an email!</p>
+
+<p>If you would like to contribute, please <a href="https://github.com/CorporateClash/API/">check us out on GitHub</a> and submit a pull-request detailing your changes!</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="python">python</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
